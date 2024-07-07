@@ -1,0 +1,15 @@
+---
+- name: Install Package
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: Install package using package manager
+    yum:
+      name: nginx
+      state: present
+  - name: start service
+    service:
+      name: nginx
+      state: started
+      enabled: true

@@ -1,0 +1,9 @@
+---
+- name: FB
+  hosts: web
+  
+  tasks:
+  - name: Test connectivity
+    ping: 
+  - name: "Print Output"
+    debug: msg="Hi, Everything is Alright"
